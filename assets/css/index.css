@@ -1,0 +1,64 @@
+.producto-detalle{
+    display: flex;
+}
+.add-to-cart input{
+    width: 60% !important;
+    margin-right: 5px;
+}
+.add-to-cart a{
+    width: 30%;
+}
+.add-to-cart{
+    display: flex;
+}
+.productcard{
+    margin: 5px;
+}
+.contenedor-productos{
+    margin: 0 auto;
+}
+.shop-cart{
+    text-align: right;
+}
+.shop-cart span{
+    border:1px solid blue;
+    padding: 5px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+}
+.email{
+    margin-bottom: 10px;
+}
+#user{
+    color: white;
+}
+.img-cart{
+    width: 100px;
+}
+.importe_total{
+    text-align:right; 
+    font-weight:bold;
+}
+.euros_total{
+    text-align: center;
+    font-weight: bold;
+}
+#products_count{
+    border: none;
+}
+.add_address input{
+margin: 10px;
+}
+.add_address{
+    margin-top: 10px;
+    border: 1px solid green;
+    padding: 10px;
+    border-radius: 10px;
+}
+.address div{
+    border: 1px solid green;
+    margin: 10px;
+    border-radius: 5px;
+}
