@@ -23,9 +23,9 @@ if (isset($_SESSION["username"])) {
     $stm->bindParam(1, $iduser);
     $stm->execute();
     $result = $stm->fetchAll(PDO::FETCH_ASSOC);
-    
+
     if ($stm->rowCount() > 0) {
-        
+
         $idcart = $result[0]["idcart"];
         //Consulto los articulos del carrito
         $sql = "select * from cart_detail where idcart=?";
@@ -69,7 +69,7 @@ if (isset($_SESSION["username"])) {
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Mi Tienda</a>
+            <a class="navbar-brand" href="./">Mi Tienda</a>
             <div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -80,12 +80,21 @@ if (isset($_SESSION["username"])) {
                     <li class="nav-item">
                         <a class="nav-link" href="#">Inicio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php">Login</a>
-                    </li>
 
                 </ul>
-                <span id="user"><?php if (isset($user)) echo $user; ?></span>
+                >
+                </ul>
+                <li class="nav-item dropdown navbar-nav ms-auto" <?php if (!isset($user)) echo 'hidden'; ?>>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="user"><?php if (isset($user)) echo $user; ?></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="perfil.php">Mi perfil</a></li>
+                        <li><a class="dropdown-item" href="logout.php">Cerrar sesion</a></li>
+                        <li><a class="dropdown-item" href="register.php">Registro</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown navbar-nav ms-auto" <?php if (isset($user)) echo 'hidden'; ?>><a href="login">Login</a></li>
             </div>
         </div>
     </nav>
