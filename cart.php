@@ -95,7 +95,7 @@ if (isset($_SESSION["username"])) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Inicio</a>
+                        <a class="nav-link" href="./">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Productos</a>
